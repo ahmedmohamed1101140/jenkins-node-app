@@ -1,3 +1,4 @@
 #!/bin/sh
-npm test test/test.js
+# chmod +x ./test.sh
+npm test test/test.js --exit
 read
