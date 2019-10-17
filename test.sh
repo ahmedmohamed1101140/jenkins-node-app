@@ -1,3 +1,3 @@
 #!/bin/sh
-chmod +x ./test.sh
+# chmod +x ./test.sh
 npm test test/test.js
