@@ -1,0 +1,23 @@
+pipeline {
+  agent any
+
+  tools {nodejs "nodejs"}
+
+  stages {    
+    stage('Cloning Git') {
+      steps {
+        git branch: 'master', url: 'https://github.com/ahmedmohamed1101140/jenkins-node-app.git'
+      }
+    }        
+    stage('Install dependencies') {
+      steps {
+        sh 'npm install'
+      }
+    }
+    stage('test') {
+      steps {
+        sh 'npm test test/test.js'
+      }
+    }
+  }
+}
